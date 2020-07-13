@@ -215,6 +215,10 @@ function zshl_sign_team() {
         echo $to_start = true;
     }
 
+    if ($place == 0) {
+      die("Wrong place");
+    }
+
     /*
      * check team is alredy registered
      */
@@ -233,10 +237,9 @@ function zshl_sign_team() {
      */
     $sql = "SELECT active, place, name FROM {$wpdb->prefix}teams WHERE reg_id = $reg_id AND place = $place AND active = 1";
     $place_check = $wpdb->get_results($sql);
-    if (count($place_check) > 0 && $place > 0) {
+    if (count($place_check) > 0) {
         $place_empty = false;
     }
-
 
     if ($place_empty && $to_start) {
 	    $table_name = $wpdb->prefix . 'teams';
