@@ -36,7 +36,9 @@ username: admin
 password: admin
 ```
 
+# Postman
 
+Add WP Cookie to Postman collection for testing
 
 
 

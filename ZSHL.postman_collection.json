@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "6fb42d0e-18df-420d-aed9-c218e57b5c9a",
+		"name": "ZSHL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Reg #2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0dde13e5-c764-4d74-b78f-ba5dd0ca25f4",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "5b265047-d1d4-447c-a485-0053443a2521",
+						"exec": [
+							"pm.globals.set('randomNumber', Math.floor(Math.random() * 20));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followAuthorizationHeader": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "reg_id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "place",
+							"value": "{{randomNumber}}",
+							"type": "text"
+						},
+						{
+							"key": "action",
+							"value": "sign_team",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://rezervacia.zshl.sk/wp-admin/admin-ajax.php",
+					"protocol": "http",
+					"host": [
+						"rezervacia",
+						"zshl",
+						"sk"
+					],
+					"path": [
+						"wp-admin",
+						"admin-ajax.php"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reg #2 Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0dde13e5-c764-4d74-b78f-ba5dd0ca25f4",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "5b265047-d1d4-447c-a485-0053443a2521",
+						"exec": [
+							"pm.globals.set('randomNumber', Math.floor(Math.random() * 20));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followAuthorizationHeader": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "reg_id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "place",
+							"value": "{{randomNumber}}",
+							"type": "text"
+						},
+						{
+							"key": "action",
+							"value": "sign_team",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://rezervacia.zshl.sk/wp-admin/admin-ajax.php",
+					"protocol": "http",
+					"host": [
+						"rezervacia",
+						"zshl",
+						"sk"
+					],
+					"path": [
+						"wp-admin",
+						"admin-ajax.php"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
